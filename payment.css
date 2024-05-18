@@ -1,0 +1,133 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4.5px;
+}
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #8ea8c1;
+    padding:  30px 10px 80px 10px;
+    background:
+        url("https://i.ibb.co/Xyy39p8/pexels-suzyhazelwood-1629236.jpg");
+}
+#dineIn{
+    color: turquoise;
+}
+#delivery{
+    color: turquoise;
+}
+  input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  input[type="radio"]:checked + label {
+    background-color: #a0b3c8; 
+    color: #d61111; 
+    border-color: #007bff;
+  }
+  input[type="radio"]{
+    color: aqua;
+  }
+  .dine{
+    color: #ff0000;
+    font-size: 1.2rem;
+  }
+  .deliv{
+    color: rgb(255, 0, 0);
+    font-size: 1.2rem;
+  }
+h2{
+    text-align: center;
+    color: #ff7b00;
+}
+body{
+    /* margin-top: 40px;    */
+    background-color: #707de6;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #a6db1ff2;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input[type="text"],select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#priceDisplay{
+    font-size: 2rem;
+    color: #d3a334;
+    font-weight: bolder;
+}
+#priceDisplayx{
+    font-size: 2rem;
+    color: #d3a334;
+    font-weight: bolder;
+}
+input[type="month"],select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="time"],select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#deliveryForm{
+    display: none;
+}
+#paymentOption{
+    display: none;
+}
+.di{
+    margin-left: 90px;
+}

@@ -1,0 +1,884 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restauraunt Menu</title>
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="menu.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- navigation bar -->
+      <img src="https://i.ibb.co/ZXB7wTz/logo.png" alt="pizza heaven" height="70" width="380" style="margin-left: 20px;">
+      <div class="navbar-container container">
+        <ul class="menu-items">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#food">Category</a></li>
+          <li><a href="#food-menu">Menu</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div onclick="toggleCart()" class="cart-items">
+        <img src="https://as2.ftcdn.net/jpg/05/32/15/67/360_F_532156733_JqPekFs1DIR2JSU1NQg0Ur7Ubjg765RM.webp" height="70" style="margin-bottom: 10px;">
+        <a><i class="fa fa-cart"></i></a>
+      </div>
+      <div>
+        <ul class="signin">
+          <li><a href="signin.html" target="_self"><i class="fa fa-user"></i></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="nav">
+      <!-- menu items -->
+          <ul class="menu-items1">
+              <li><a href="#nonveg-pizza">NON-VEG PIZZAS</a></li>
+              <li><a href="#veg-pizza">VEG PIZZAS</a></li>
+              <li><a href="#combo">COMBO PACKS</a></li>
+              <li><a href="#beverages">BEVERAGES</a></li>
+              <li><a href="#desserts">DESSERTS</a></li>
+          </ul>
+    </div>
+    <section class="showcase-area" id="home">
+      <div class="showcase-container">
+        <!-- <a href="#food-menu" class="btn btn-primary">Menu</a> -->
+      </div>
+
+    </section>
+    <div class="cart" id="cart">
+      <h2 class="cartn">Cart:</h2>
+      <div id="cart-items">
+          <!-- Cart items will be displayed here -->
+      </div>
+      <p class="cartn1">Total: ₹<span id="total">0</span></p>
+      <div class="Checkout">
+        <button class="payment" onclick="checkout()">Checkout</button>
+      </div>
+    </div><hr>
+    <section id="food">
+      <!-- types of food -->
+      <h2>Types of food</h2>
+      <div class="food-container container">
+        <a href="#nonveg-pizza" >
+          <div>
+            <div class="img-container">
+              <img decoding="async" src="https://d3gy1em549lxx2.cloudfront.net/a2798454-4983-4cd0-8599-06fa655dad13.jpg" alt="error" />
+              <div class="name">
+                <h3>NON-VEG PIZZA</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#veg-pizza">
+          <div>
+            <div class="img-container">
+              <img decoding="async" src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/veggie-supreme-cheese-maxx.9c36faf3796239a077a0a98ba489d7ce.1.jpg" alt="error" />
+              <div class="name">
+                <h3>VEG PIZZA</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#combo">
+          <div>
+            <div class="img-container">
+              <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/12e68204-001b-4830-a6c3-6b0a829a783f_CMB1398.jpg" alt="error" />
+              <div class="name">
+                <h3>COMBO PACKS</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#beverages">
+          <div>
+            <div class="img-container">
+              <img decoding="async" src="https://images.pexels.com/photos/15205136/pexels-photo-15205136/free-photo-of-close-up-photo-of-coca-cola-drink.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="error" />
+              <div class="name">
+                <h3>BEVERAGES</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#desserts">
+          <div>
+            <div class="img-container">
+              <img decoding="async" src="https://t3.ftcdn.net/jpg/03/01/97/86/360_F_301978652_O0aPwap1JaEVaAhj3mIlbqNnJGmRyCzC.jpg" alt="error" />
+              <div class="name">
+                <h3>DESSERTS</h3>
+              </div>
+            </div>
+          </div>
+        </a>  
+        </div>
+
+      </section>
+      <hr>
+    <section id="food-menu">
+      <h1 class="food-menu-heading1">Food Menu</h1>
+        <h2 class="food-menu-heading2" style="background: inherit;"><br>NON-VEG PIZZAS</h2>
+      <section id="nonveg-pizza">
+        <div class="food-menu-container container">
+          
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/97011d39-db6b-4665-a486-73aeb504da23_new_chicken_dominator.jpg" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Chicken Dominator</h2>
+              <p >
+                Loaded with double pepper barbecue chicken, peri-peri chicken, chicken tikka & grilled chicken rashers.
+              </p>
+              <p class="food-price">Price: ₹ 599</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity1" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(599,'Chicken Dominator','quantity1')" >Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async"
+                src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/4d42a594-14be-48d2-ac4a-adcd0034a08f_FierySausagePaprikadef.jpeg"
+                alt="error"
+              />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Fiery Sausage & Paprika</h2>
+              <p>
+                Spiciest non veg pizza with spicy & herby chicken sausage and red paprika toppings on a new spicy peri peri sauce base.
+              </p>
+              <p class="food-price">Price: ₹ 449</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity2" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(449,'Fiery Sausage & Paprika','quantity2')">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/b2fd890f-5889-4934-8586-1dbedb6fb856_new_chicken_golden_delight.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Chicken Golden Delight</h2>
+            <p>
+              Double pepper barbecue chicken, golden corn and extra cheese, true delight.
+            </p>
+            <p class="food-price">Price: ₹ 559</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity3" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(559,'Chicken Golden Delight','quantity3')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/b0bdc2e7-8860-4cc7-8029-fe556493076b_new_chicken_fiesta.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Chicken Fiesta</h2>
+            <p>
+              Grilled chicken rashers, peri-peri chicken, onion & capsicum, a complete fiesta.
+            </p>
+            <p class="food-price">Price: ₹ 559</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity4" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(559,'Chicken Fiesta','quantity4')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/0ecfd107-5e1b-48d8-8210-2c17ff4185dd_cheesepepperoni.png" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Chicken Pepperoni</h2>
+            <p>
+              A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped with extra cheese.
+            </p>
+            <p class="food-price">Price: ₹ 599</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity5" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(599,'Chicken Pepperoni','quantity5')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/8c83ba68-879e-47aa-911c-4b523844a025_SpicedDoubleChicken.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Spiced Double Chicken</h2>
+            <p>
+              Delightful combination of our spicy duo- Pepper Barbecue Chicken and Peri Peri Chicken for Chicken Lovers.
+            </p>
+            <p class="food-price">Price: ₹ 559</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity6" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(559,'Spiced Double Chicken','quantity6')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/a2e2cc55-be96-4d21-a6e0-db5677bb61f6_The5ChickenFeastPizza.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">The 5 Chicken Feast Pizza</h2>
+            <p>
+              Loaded with 5 different Chicken toppings - grilled Chicken Rashers, Chicken Meatballs, Chicken Tikka,...
+            </p>
+            <p class="food-price">Price: ₹ 699</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity7" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(699,'The 5 Chicken Feast Pizza','quantity7')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/f91f4a7d-3fd5-4107-aa57-4eed8e12ee6a_SmokedChicken.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Smoked Chicken Gourmet-Pizza</h2>
+            <p>
+              Gourmet non-veg delight with bocconcini, juicy chicken, olives, bellpeppers & basil pesto.
+            </p>
+            <p class="food-price">Price: ₹ 629</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity8" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(629,'Smoked Chicken Gourmet-Pizza','quantity8')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section id="veg-pizza">
+        <h2 class="food-menu-heading2">VEG PIZZAS</h2>
+        <div class="food-menu-container container">
+          
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/f65964c6-de96-475d-a5a9-3f3698d66ee7_new_peppy_paneer.jpg" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Peppy Paneer</h2>
+              <p>
+                Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika.
+              </p>
+              <p class="food-price">Price: ₹ 459</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity9" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(459,'Peppy Paneer','quantity9')" >Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async"
+                src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/10ddf620-ae20-477f-b4b2-9bce1ded021d_BlazingOnionPaprikacartmenu.jpeg"
+                alt="error"
+              />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Blazing Onion & Paprika</h2>
+              <p class="description">
+                Hot & spicy pizza with onion & red paprika toppings and a new spicy peri peri sauce on a Domino's...
+              </p>
+              <p class="food-price">Price: ₹ 329</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity10" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(329,'Blazing Onion & Paprika','quantity10')">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/17bc2a18-73f5-49d7-95eb-327091806cd6_IndianTandooriPaneer.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Indi Tandoori Paneer</h2>
+            <p>
+              It is hot. It is spicy. It is oh-so-Indian. Tandoori paneer with capsicum, red paprika & mint mayo.            
+            </p>
+            <p class="food-price">Price: ₹ 549</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity11" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(549,'Indi Tandoori Paneer','quantity11')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/7f78135a-c94a-4586-b9c2-35e955924e57_The4CheesePizza.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Cheese Overload</h2>
+            <p>
+              Cheese Overloaded Pizza with a medley of Mozzarella, Cheddar & Ghost Pepper flavoured Cheese.            
+            </p>
+            <p class="food-price">Price: ₹ 639</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity12" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(639,'Cheese Overload','quantity12')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/a94524cf-3acc-476a-a3a8-f0209ea9d4b2_new_cheese_n_corn.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Cheese n Corn</h2>
+            <p>
+              A delectable combination of sweet & juicy golden corn.            
+            </p>
+            <p class="food-price">Price: ₹ 379</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity13" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(379,'Cheese n Corn','quantity13')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/09e3f02a-3c27-46b1-b358-68fdd8fbd978_new_mexican_green_wave.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Mexican Green Wave</h2>
+            <p>
+              Mexican herbs sprinkled on onion, capsicum, tomato & jalapeno.            
+            </p>
+            <p class="food-price">Price: ₹ 459</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity14" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(459,'Mexican Green Wave','quantity14')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/5f8ad75f-22d0-4dfb-80e1-852fe2f1caf9_new_veg_extravaganza.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Veg Extravaganza</h2>
+            <p>
+              Black olives, capsicum, onion, grilled mushroom, corn, tomato, jalapeno & extra cheese.            
+            </p>
+            <p class="food-price">Price: ₹ 549</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity15" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(549,'Veg Extravaganza','quantity15')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/79bc3609-690b-440e-b8be-74694b1f3215_new_margherita_2502.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Margherita</h2>
+            <p>
+              Classic delight with 100% real mozzarella cheese.           
+            </p>
+            <p class="food-price">Price: ₹ 239</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity16" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(239,'Margherita','quantity16')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section id="combo">
+        <h2 class="food-menu-heading2">COMBO PACKS</h2>
+        <div class="food-menu-container container">
+          
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/c3e8b8d1-a6c4-4310-8f8c-e59d85ad66e4_CMB1386Menu.jpg" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Match Dominator Combo (Non Veg)</h2>
+              <p>
+                Regular Pepper BBQ Chicken + Regular Chicken Dominator + Garlic Bread + Pepsi
+              </p>
+              <p class="food-price">Price: ₹ 659</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity33" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(659,'Match Dominator Combo (Non Veg)','quantity33')" >Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async"
+                src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/513d53c4-90ac-4875-99b1-5be9c33831f3_CMB1402Menu.jpg"
+                alt="error"
+              />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Super Over Combo (Veg)</h2>
+              <p>
+                Medium Peppy Paneer + Medium Farmhouse + Garlic Bread + 2 Pepsi
+              </p>
+              <p class="food-price">Price: ₹ 969</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity34" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(969,'Super Over Combo (Veg)','quantity34')">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/95aba1e0-4e2e-48f4-8031-20bd1c361282_CMB1411Menu.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Winning Partnership Combo (Non-Veg)</h2>
+            <p>
+              Medium Non Veg Supreme + Medium Chicken Dominator + Garlic Bread + 2 Pepsi    
+            </p>
+            <p class="food-price">Price: ₹ 1119</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity35" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(1119,'Winning Partnership Combo (Non-Veg)','quantity35')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/f082105b-c7b9-4d3c-b504-15ac991a6f26_CMB1385Menu.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Meal for 2: Pepper BBQ Chicken & Spiced Double Chicken</h2>
+            <p>
+              Regular Pepper BBQ Chicken + Regular Spiced Double Chicken + Garlic Bread + Pepsi
+            </p>
+            <p class="food-price">Price: ₹ 619</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity36" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(619,'Meal for 2: Pepper BBQ Chicken & Spiced Double Chicken','quantity36')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/faf9e993-5891-4a21-8c9b-44277b72ea7f_CMB1400Menu.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Meal for 4: Margherita & Peppy Paneer</h2>
+            <p>
+              Medium Margherita + Medium Peppy Paneer + Garlic Bread + 2 Pepsi        
+            </p>
+            <p class="food-price">Price: ₹ 789</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity37" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(789,'Meal for 4: Margherita & Peppy Paneer','quantity37')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/12e68204-001b-4830-a6c3-6b0a829a783f_CMB1398.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Meal for 4: Veg Loaded Pizza</h2>
+            <p>
+              Regular Veg Extravaganza + Regular Veg Paradise Pizza + Regular Indi Tandoori Paneer + Regular Farmhouse
+            </p>
+            <p class="food-price">Price: ₹ 949</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity38" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(949,'Meal for 4: Veg Loaded Pizza','quantity38')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/b59ef0cf-33a0-4778-9fb7-4bd78b646233_CMB1383Menu.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Big Hitter Combo (Veg)</h2>
+            <p>
+              Regular Veg Extravaganza + Regular Indi Tandoori Paneer + Garlic Bread + Pepsi
+            </p>
+            <p class="food-price">Price: ₹ 649</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity39" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(649,'Big Hitter Combo (Veg)','quantity39')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/99507ce3-553f-4ab1-87d2-8019e7a49dad_CMB1397.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Meal for 4: Veg Cheesy Pizza</h2>
+            <p>
+              Regular Fresh Veggie + Regular Peppy Paneer + Regular Corn n Cheese + Regular Farmhouse           
+            </p>
+            <p class="food-price">Price: ₹ 799</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity40" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(799,'Meal for 4: Veg Cheesy Pizza','quantity40')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section id="beverages">
+        <h2 class="food-menu-heading2">BEVERAGES</h2>
+        <div class="food-menu-container container">
+          
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/md/D-K485.jpg?ver=41.8" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Pepsi 475ml</h2>
+              <p>
+                Sparkling and Refreshing Beverage.
+              </p>          
+              <p class="food-price">Price: ₹ 60</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity17" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(60,'Pepsi 475ml','quantity17')" >Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async"
+                src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/b1e4223a-5ab0-42bb-a6b9-6676e69b9b2d_PEPSIBLACKCANSearch.jpg"
+                alt="error"
+              />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Pepsi Black Can 300ml</h2>
+              <p>
+                Maximum Taste Zero Calories.
+              </p>
+              <p class="food-price">Price: ₹ 60</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity18" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(60,'Pepsi Black Can 300ml','quantity18')">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://www.contis.ph/cdn/shop/products/CokeinCan.jpg?v=1689558538" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Coca Cola, 750 ml</h2>
+            <p>
+              It’s Coca‑Cola, only spiced. Coca‑Cola Spiced transforms the familiar into the extraordinary.</p>
+            <p class="food-price">Price: ₹ 90</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity19" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(90,'Coca Cola, 750 ml','quantity19')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://lh3.googleusercontent.com/DR8oBv0vJsICfxgOwQ4CObNgU2hOWq8Lj0sF6y9TO8FbFr1ge9guON_Xr2TTjbFrDTN4NEIlpK_bVEFha8HhCgaLGPTw8-LJo3kPLQ4=w512-rw" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Thumsup 330 ml</h2>
+            <p>
+              Sparkling & Refreshing Beverage.
+             </p>
+            <p class="food-price">Price: ₹ 67</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity20" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(67,'Thumsup 330 ml','quantity20')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/md/D-K488.jpg?ver=41.8" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Mirinda Can 300 ml</h2>
+            <p>
+              Mirinda Can 300 ml.
+             </p>
+            <p class="food-price">Price: ₹ 57</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity21" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(57,'Mirinda Can 300 ml','quantity21')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/md/D-K487.jpg?ver=41.8" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">7UP Can 300 ml</h2>
+            <p>
+              7UP Can 300 ml.
+             </p>
+            <p class="food-price">Price: ₹ 57</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity22" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(57,'7UP Can 300 ml','quantity22')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://www.bigbasket.com/media/uploads/p/l/40269292-8_1-sprite-soft-drink-chill-at-home-100-recyclable-bottles.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Sprite Can 300 ml</h2>
+            <p>
+              Sprite Can 300 ml.
+             </p>
+            <p class="food-price">Price: ₹ 38</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity23" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(38,'Sprite Can 300 ml','quantity23')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://cdn.zeptonow.com/production///tr:w-250,ar-1000-1000,pr-true,f-auto,q-80/cms/product_variant/8fc5c2fd-996c-43ea-8418-f3d68ea38705.jpeg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Sting Energy Drink Can 250 ml</h2>
+            <p>
+              Sting Energy Drink Can 250 ml.
+             </p>
+            <p class="food-price">Price: ₹ 35</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity24" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(35,'Sting Energy Drink Can 250 ml','quantity24')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section id="desserts">
+        <h2 class="food-menu-heading2">DESSERTS</h2>
+        <div class="food-menu-container container">
+          
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/8fe79905-774d-4dee-ab7d-3f915a1161bb_CAKE03.jpg" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Red Velvet Lava Cake</h2>
+              <p>
+                A truly indulgent experience with sweet and rich red velvet cake on a creamy cheese flavoured base to.
+              </p>
+              <p class="food-price">Price: ₹ 139</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity25" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(139,'Red Velvet Lava Cake','quantity25')" >Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="food-menu-item">
+            <div class="food-img">
+              <img decoding="async" src="https://i0.wp.com/www.mybigfathalalblog.com/wp-content/uploads/2018/11/LOTUS-CHEESECAKE-2.jpg" alt="" />
+            </div>
+            <div class="food-description">
+              <h2 class="food-titile">Lotus Biscoff Regular McFlurry</h2>
+              <p>
+                Try the trending indulgent Lotus Biscoff for a unique sweet end to your meal. Hurry before it's gone!.
+              </p>
+              <p class="food-price">Price: ₹ 133</p>
+              <p class="quantity">Quantity:<input type="number" value="0" id="quantity26" style="size: 1px; width: 30px;height: 20px;" ></p>
+              <button class="btn btn-primary addtocart" onclick="addItem(133,'Lotus Biscoff Regular McFlurry','quantity26')">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/209bc3ff-ea57-406b-bc4e-57256dcf7872_Butterscotch.png" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Butterscotch Mousse Cake</h2>
+            <p>
+              Sweet temptation! Butterscotch flavored mousse.
+            </p>
+            <p class="food-price">Price: ₹ 109</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity27" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(109,'Butterscotch Mousse Cake','quantity27')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://www.shreemithai.com/cdn/shop/products/black-forest-cake-222028.jpg?v=1707819760" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Black Forest McFlurry </h2>
+            <p>
+              A sinful delight, soft serve topped with delicious, gooey hot chocolate fudge. Always grab an extra spoon.  
+            </p>
+            <p class="food-price">Price: ₹ 115</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity28" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(115,'Black Forest McFlurry ','quantity28')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async" src="https://threesnackateers.com/wp-content/uploads/2022/06/Brownie-Sundae-Recipe-720x720.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Brownie Hot Fudge</h2>
+            <p>
+              Luscious chocolate brownie and hot-chocolate fudge to sweeten your day.    
+            </p>
+            <p class="food-price">Price: ₹ 138</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity29" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(138,'Brownie Hot Fudge','quantity29')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/df4eb645-30c0-469d-b937-895593451583_Choco_Lava.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Choco Lava Cake</h2>
+            <p>
+              Chocolate lovers delight! Indulgent, gooey molten lava inside chocolate cake.
+            </p>
+            <p class="food-price">Price: ₹ 109</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity30" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn btn-primary addtocart" onclick="addItem(109,'Choco Lava Cake','quantity30')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item1">
+          <div class="food-img">
+            <img decoding="async" src="https://d3gy1em549lxx2.cloudfront.net/e6c2a28c-77e3-49cb-a294-ea6d2b6c4217.jpg" alt="" />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Red-Velvet Charlotte</h2>
+            <p>
+              Red-Velvet Charlotte to sweeten your day.    
+            </p>
+            <p class="food-price">Price: ₹ 102</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity31" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn1 btn-primary addtocart" onclick="addItem(102,'Red-Velvet Charlotte','quantity31')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food-menu-item1">
+          <div class="food-img">
+            <img decoding="async"
+              src="https://d3gy1em549lxx2.cloudfront.net/c0d0a675-b732-48d6-a214-bb8633ab78a7.jpg"
+              alt="error"
+            />
+          </div>
+          <div class="food-description">
+            <h2 class="food-titile">Black Forest Log (Eggless)</h2>
+            <p>
+              Black Forest Log without egg.
+            </p>
+            <p class="food-price">Price: ₹ 108</p>
+            <p class="quantity">Quantity:<input type="number" value="0" id="quantity32" style="size: 1px; width: 30px;height: 20px;" ></p>
+            <button class="btn1 btn-primary addtocart" onclick="addItem(108,'Black Forest Log (Eggless)','quantity32')">Add to Cart</button>
+          </div>
+        </div>
+      </section><hr>
+    </section>
+    <section id="reviews"><br>
+      <h2 class="review-title">What Our Customers Say</h2>
+      <div class="review-container container">
+        <div class="review-box">
+          <div class="customer-detail">
+            <div class="customer-photo">
+              <img decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx-5aqoQPoKBh8cp8Jgve1RfTdMbb9ayXjIprYbnHH5g&s" alt="" />
+              <p class="customer-name">Mahesh Babu</p>
+            </div>
+          </div>
+          <p class="review-text">
+            The taste was very good I really loved it. But the only disappointment is that there was only few pieces of paneer that I was not accepting. in the picture there were loaded panner but I received very few.
+          </p>
+        </div>
+        <div class="review-box">
+          <div class="customer-detail">
+            <div class="customer-photo">
+              <img decoding="async" src="https://assets.telegraphindia.com/telegraph/2023/Nov/1700872133_jayshahfinal.jpg" alt="" />
+              <p class="customer-name">Jai Sha</p>
+            </div>
+          </div>
+          <p class="review-text">
+            I'm a huge fan of thin crust pizzas, and my favorite topping combination is pepperoni, mushrooms, and black olives. The crispy crust and savory toppings are irresistible.
+          </p>
+        </div>
+        <div class="review-box">
+          <div class="customer-detail">
+            <div class="customer-photo">
+              <img decoding="async" src="data:image/jpeg;base64,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" alt="" />
+              <p class="customer-name">Arjun</p>
+            </div>
+          </div>
+          <p class="review-text">
+            Pizza is the perfect canvas for creativity. Whether you prefer classic Italian flavors or bold international influences, there's a pizza out there for every palate.
+          </p>
+        </div>
+        <div class="review-box">
+          <div class="customer-detail">
+            <div class="customer-photo">
+              <img decoding="async"
+                src="https://www.clinicdermatech.com/images/men-service-face.jpg"
+                alt=""
+              />
+              <p class="customer-name">David Watson</p>
+            </div>
+          </div>
+          <p class="review-text">
+            I'm always on the lookout for unique pizza flavors, and one of the most memorable ones I've tried was a truffle mushroom pizza topped with shaved parmesan. It was pure decadence!
+          </p>
+
+        </div>
+        <div class="review-box">
+          <div class="customer-detail">
+            <div class="customer-photo">
+              <img decoding="async" src="https://static.toiimg.com/thumb/width-400,resizemode-4,msid-77572485/77572485.jpg" alt="" />
+              <p class="customer-name">MSD</p>
+            </div>
+          </div>
+          <p class="review-text">
+            As a vegetarian, I appreciate the variety of options available for veggie pizzas. Spinach, roasted red peppers, and feta cheese make for a delicious and nutritious combination.
+          </p>
+
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact-container container">
+        <div class="contact-img">
+          <img decoding="async" src="https://plus.unsplash.com/premium_photo-1661772253149-48ec033cf4b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMGZvb2QlMjBnaXJsc3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
+        </div>
+
+        <div class="form-container">
+          <h2>Contact Us</h2>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="E-Mail" />
+          <textarea
+            cols="30"
+            rows="6"
+            placeholder="Type Your Message"
+          ></textarea>
+          <a href="#" class="btn btn-primary">Submit</a>
+        </div>
+      </div>
+    </section>
+      <section id="about-us">
+        <div class="container">
+          <h2>About Us</h2>
+          <div class="team-members">
+            <div class="member">
+              <img class="customer-phot" src="https://hungryforever.net/wp-content/uploads/2015/07/DSC_6397.jpg" alt="" />
+              <h3>Vineet Bhatia</h3>
+              <p>Head Chef</p>
+              <p>Twice starred Michelin Chef, Vineet Bhatia is one of the most popular Indian Chefs in Britain. His modern take on traditional dishes has made him popular as one of the best chefs in Indian cuisine.</p>
+            </div>
+            <div class="member">
+              <img class="customer-phot" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTwZ2ScOyHrCfbYVQ2jCd-tiy5mQzVRPSNJqMUaRU3bQ&s" alt="Team Member 2">
+              <h3>Vikas Khanna</h3>
+              <p>Operations Manager</p>
+              <p>Vikas Khanna ensures smooth operations in the kitchen and delivery processes to satisfy our customers.This award winning Michelin starred chef is an inspiration to many.</p>
+            </div>
+            <div class="member">
+              <img class="customer-phot" src="https://hungryforever.net/wp-content/uploads/2015/07/28-291108_gwlivefood-390-2.jpg" alt="Team Member 3">
+              <h3>Anjum Anand</h3>
+              <p>Marketing Manager</p>
+              <p>She is one of the most recognizable faces in the culinary field in the UK. She has immense television exposure and her shows are a huge hit.</p>
+            </div>
+            <div class="member">
+              <img class="customer-phot" src="https://hungryforever.net/wp-content/uploads/2015/07/Chef-Vikram-.jpg" alt="Team Member 4">
+              <h3>Vikram Khatri</h3>
+              <p>Customer Representative</p>
+              <p>Awarded the ‘Chef of the Year’ award in 2010, Chef Vikram Khatri of Guppy by ai in Delhi is renowned for his Japanese cuisine.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer id="footer">
+      <div class="social-media">
+        <h1><bold>FOLLOW&nbsp;&nbsp;&nbsp;US&nbsp;&nbsp;ON&nbsp;&nbsp;SOCIAL  MEDIA</bold></h1>
+          <div class="social-media-links">
+            <a href="https://www.instagram.com/" class="fa fa-instagram" id="ig"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a> 
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+            <a href="https://www.snapchat.com/add/" class="fa fa-snapchat-ghost"></a>
+          </div> 
+      </div>
+    </footer>
+
+</body>
+</html>

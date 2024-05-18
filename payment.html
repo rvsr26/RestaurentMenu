@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment_method</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body id="body">
+    <div class="container">
+        <h2>PAYMENT  OPTIONS</h2>
+        <form action="dinein">
+            <input id='dineIn' type="radio" name="option" value="dineIn" onclick="showdineOption()"/> <label class="dine">Dine In </label>
+            <input id="delivery" type="radio" name="option" value="delivery" onclick="showdineOption()" class="di"/> <label class="deliv">Home Delivery</label>
+        </form>
+        <form action="deli" id="deliveryForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="apartment">Apartment/Suite Number:</label>
+            <input type="text" id="apartment" name="apartment">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="state">State/Region:</label>
+            <input type="text" id="state" name="state" required>
+            <label for="zip">PIN Code:</label>
+            <input type="text" id="zip" name="zip" required>
+            <label for="instructions">Delivery Instructions:</label>
+            <textarea id="instructions" name="instructions"></textarea><br>
+            <label for="deliveryTime">Preferred Delivery Time:</label>
+            <input type="time" id="deliveryTime" name="deliveryTime">
+            <label for="amount" id="priceDisplay">Amount:</label>
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="cash">Cash on Delivery</option>
+                <option value="card">Credit Card</option>
+                <option value="online">Online Payment</option>
+            </select>
+            <input type="submit" value="Submit Order" onclick="deliver()"/>
+        </form>
+        <form action="/process_payment" method="POST" id="paymentOption">
+            <label for="payment_method">Payment Method:</label>
+            <select id="payment_method" name="payment_method" onchange="toggleCardDetails()">
+                <option value="select">Select</option>
+                <option value="credit_card" onchange="toggleCardDetails()">Credit Card</option>
+                <option value="debit_card" onchange="toggleCardDetails()">Debit Card</option>
+                <option value="digital_wallet">Digital Wallet</option>
+                <option value="phonepe_upi">PhonePe UPI</option>
+                <option value="google_pay">Google Pay</option>
+            </select>
+            <label for="card_number" class="hide-card-details">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" required class="hide-card-details">
+            <label for="expiration_date" class="hide-card-details">Expiration Date:</label>
+            <input type="month" class="hide-card-details" id="expiration_date" name="expiration_date" placeholder="MM/YYYY" required><br>
+            <label for="cvv" class="hide-card-details">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required class="hide-card-details">
+            <label for="pin" class="hide-card-details" >PIN:</label>
+            <input type="text" id="pin" name="pin" class="hide-card-details" required>
+            <label for="wallet_id" class="hide-card-details1">UPI ID:</label>
+            <input type="text" id="wallet_id" name="wallet_id" class="hide-card-details1" required>
+            <label for="amount" id="priceDisplayx">Amount:</label>
+            <input type="submit" value="Submit Payment" onclick="check()"><br><br>
+            <div>
+                <img src="https://insightfinance.in/wp-content/uploads/2023/06/UPI-payment-.jpg" height="230" alt="">
+            </div>
+        </form>
+    </div>
+        <script>
+             window.onload = function() {
+                const totalPrice = localStorage.getItem('totalPrice');
+                document.getElementById('priceDisplay').textContent = 'Amount: ₹' + totalPrice;
+                document.getElementById('priceDisplayx').textContent = 'Amount: ₹' + totalPrice;
+            }
+            function toggleCardDetails() {
+                var paymentMethod = document.getElementById("payment_method").value;
+                var cardFields = document.querySelectorAll('.hide-card-details'); 
+                var carFields = document.querySelectorAll('.hide-card-details1'); 
+                if (paymentMethod === "phonepe_upi" || paymentMethod === "google_pay" || paymentMethod === "digital_wallet") {
+                    cardFields.forEach(function(element) {
+                        element.style.display = "none";
+                    });
+                    carFields.forEach(function(element) {
+                        element.style.display = "block"; 
+                    });
+                } 
+                else if(paymentMethod === "credit_card" || paymentMethod === "debit_card"){
+                    carFields.forEach(function(element) {
+                        element.style.display = "none";
+                    });
+                    cardFields.forEach(function(element) {
+                        element.style.display = "block";
+                    });
+                }
+                else {
+                    cardFields.forEach(function(element) {
+                        element.style.display = "block";
+                    });
+                    carFields.forEach(function(element) {
+                        element.style.display = "none";
+                    });
+                }
+            }
+                function showdineOption(){
+                    var dinein=document.getElementById('dineIn').checked;
+                    var delivey=document.getElementById('delivery').checked;
+                        if (delivey) {
+                            document.getElementById("deliveryForm").style.display = "block";
+                            document.getElementById("paymentOption").style.display = "none";
+                            document.getElementById("body").style.backgroundImage='url("https://wallpapers.com/images/hd/home-food-delivery-8tqxvtoty0mtfnl4.jpg")';
+                        }
+                        else if(dinein) {
+                            document.getElementById("deliveryForm").style.display = "none";
+                            document.getElementById("paymentOption").style.display = "block";
+                            document.getElementById("body").style.backgroundImage='url("https://t3.ftcdn.net/jpg/06/39/01/78/360_F_639017831_SyiXzXpbH7lMz9W9eTM4iURBsMZ81njB.jpg")';
+                        }
+                }
+                function check(){
+                    if (validateForm()) {
+                        window.open('https://i.ibb.co/MGKSyN1/thank-you-for-visiting-signature-sign-k2-0716.png','_self');
+                    } else {
+                    alert("Please fill out all fields.");
+                    }
+                }
+                function validateForm() {
+                    var wallet_id = document.getElementById("wallet_id").value;
+                    var pin = document.getElementById("pin").value;
+                    var cvv = document.getElementById("cvv").value;
+                    var expiration_date = document.getElementById("expiration_date").value;
+                    var card_number = document.getElementById("card_number").value;
+                    var paymentMethod = document.getElementById("payment_method").value;
+
+                    if (paymentMethod === "phonepe_upi" || paymentMethod === "google_pay" || paymentMethod === "digital_wallet") {
+                        if (wallet_id === "" ) {
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    } 
+                    else if(paymentMethod === "credit_card" || paymentMethod === "debit_card"){
+                        if ( pin === "" || cvv === "" || expiration_date === "" || card_number === "") {
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    }
+                }
+                    function deliver() {
+                        var name = document.getElementById("name").value;
+                        var phone = document.getElementById("phone").value;
+                        var email = document.getElementById("email").value;
+                        var address = document.getElementById("address").value;
+                        var apartment = document.getElementById("apartment").value;
+                        var city = document.getElementById("city").value;
+                        var state = document.getElementById("state").value;
+                        var zip = document.getElementById("zip").value;
+                        var instructions = document.getElementById("instructions").value;
+                        //var paymentMethod = document.getElementById("paymentMethod").value;
+
+                        // Check if any of the required fields are empty
+                        if (name === "" || city === "" || zip === "" || phone === "" || email === "" || address === "" || apartment === "" || state === "") {
+                            var isFormValid=false; // At least one required field is empty
+                        } else {
+                            var isFormValid= true; // All required fields are filled
+                        }
+                        if (isFormValid===true) {
+                            var imagePath = 'https://i.ibb.co/8YtBNk6/PAYMENT-SUCCESS.png';
+                            window.open(imagePath, '_self');
+                        } else {
+                            alert("Please fill out all fields.");
+                        }
+                    }
+
+
+        </script>
+</body>
+</html>
