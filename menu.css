@@ -11,6 +11,7 @@
     background-color: darkblue;
     width: 80%;
     margin: 0 auto;
+     
 }
 .fa-user{
     color: #592b8d;
@@ -24,7 +25,6 @@ body {
 /* ///////////..utility classes../////////// */
 
 .container {
-    max-width: 1200px;
     width: 90%;
     margin: auto;
 }
@@ -73,6 +73,7 @@ body {
     display: flex;
     align-items: center;
     position: fixed;
+     z-index: 1000;
 }
 
 
@@ -82,7 +83,10 @@ body {
     height: 100px;
     align-items: center;
 }
-
+main {
+  width: 90%;
+  max-width: 1200px; /* keeps it from getting too wide on large monitors */
+}
 .menu-items {
     /* order: 2; */
     display: flex;
