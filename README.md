@@ -79,10 +79,14 @@ You can extend the project by adding:
 ---
 
 ## 📸 Preview
-**Sign In / Sign Up Page Example:**  
-![Signin Screenshot](https://i.ibb.co/KD0sJjT/poster.jpg)
-menu <img width="1858" height="794" alt="image" src="https://github.com/user-attachments/assets/4443b894-53b7-46b2-adb5-5f9114162b0c" />
-home <img width="1863" height="1020" alt="image" src="https://github.com/user-attachments/assets/8cd68740-555e-418f-a85d-0c0fca3c331a" />
+**Sign In / Sign Up Page:**  
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/71e6b5e5-e9a7-4094-a055-f03f99ecdb53" />
+**Home Page :**  
+<img width="1863" height="1020" alt="image" src="https://github.com/user-attachments/assets/8cd68740-555e-418f-a85d-0c0fca3c331a" />
+**Menu Page:**  
+<img width="1858" height="794" alt="image" src="https://github.com/user-attachments/assets/4443b894-53b7-46b2-adb5-5f9114162b0c" />
+**Payment Page:**  
+<img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/8a937bc7-750e-457c-b046-d318dbd46c11" />
 
 
 ---
