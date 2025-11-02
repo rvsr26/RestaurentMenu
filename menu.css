@@ -395,13 +395,12 @@ a{
     display: block;
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 15px;
     object-fit: cover;
     object-position: center;
 }
 #food-menu{
-     background: 
-        url("https://i.ibb.co/TPYhZwK/Screenshot-2024-04-29-103408.png");
+     background-color: #0fab8c;
     background-position: center;
     background-size: cover;
     background-position: center;
@@ -415,12 +414,22 @@ a{
     flex: 1 1 600px;
     justify-content: space-evenly;
     margin-bottom: 3rem;
+     margin-left: 2rem;
+    background: #1e1a1a;
+    border-radius: 15px;
+    padding: 1.5rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.food-menu-item1 {
+.food-menu-item1{
     display: flex;
-    flex: 1 1 6px;
-    background:inherit;
-    margin-bottom: 25px;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    background: #4a3c3c;
+    border-radius: 15px;
+    padding: 1.5rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .food-description {
     margin: auto 1.5rem;
